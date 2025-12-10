@@ -1,0 +1,43 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# Node (if you use any JS scripts)
+node_modules/
+
+# Images cache
+*.thumb
+*.tmp
+
+# Batch API outputs
+batch_runs/
+responses/
+results/
+
+# Local environment configs
+.env
+.env.*
