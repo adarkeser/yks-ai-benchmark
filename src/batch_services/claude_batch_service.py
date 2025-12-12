@@ -29,7 +29,7 @@ class ClaudeBatchService:
                 "custom_id": question.custom_id,
                 "params": {
                     "model": self.model,
-                    "max_tokens": 1000,  # Allow full reasoning for research quality
+                    "max_tokens": 5000,  # Allow full reasoning for research quality
                     "system": system_msg,
                     "messages": [
                         {

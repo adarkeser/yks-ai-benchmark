@@ -183,7 +183,8 @@ class ReportGenerator:
                     "ground_truth": eval_item.get("ground_truth"),
                     "model_answer": eval_item.get("model_answer"),
                     "correct": eval_item.get("correct"),
-                    "full_response": eval_item.get("response_text"),  # The full reasoning
+                    "reasoning": eval_item.get("reasoning", ""),  # Brief reasoning
+                    "full_response": eval_item.get("response_text", ""),  # Complete response
                 }
                 model_responses.append(response_data)
             

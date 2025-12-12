@@ -55,7 +55,7 @@ class OpenAIBatchService:
                             ]
                         }
                     ],
-                    "max_tokens": 5000
+                    "max_completion_tokens": 5000
                 }
             }
             requests.append(request)

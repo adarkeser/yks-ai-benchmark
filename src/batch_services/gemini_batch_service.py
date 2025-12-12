@@ -38,12 +38,11 @@ class GeminiBatchService:
                     "key": question.custom_id,
                     "request": {
                         "systemInstruction": {
-                            "parts": [
-                                {"text": system_msg}
-                            ]
+                            "parts": [{"text": system_msg}]
                         },
                         "contents": [
                             {
+                                "role": "user",
                                 "parts": [
                                     {
                                         "fileData": {
@@ -56,7 +55,7 @@ class GeminiBatchService:
                             }
                         ],
                         "generationConfig": {
-                            "maxOutputTokens": 1000
+                            "maxOutputTokens": 2500
                         }
                     }
                 }
@@ -148,11 +147,11 @@ class GeminiBatchService:
         print(f"[Gemini] Downloading results for batch: {self.batch_name}")
         
         # Check if results file is available
-        if not hasattr(batch, 'dest') or not batch.dest or not batch.dest.fileName:
+        if not hasattr(batch, 'dest') or not batch.dest or not batch.dest.file_name:
             print("[Gemini] No results file found")
             return []
         
-        result_file_name = batch.dest.fileName
+        result_file_name = batch.dest.file_name
         print(f"[Gemini] Results file: {result_file_name}")
         
         # Download the results file
